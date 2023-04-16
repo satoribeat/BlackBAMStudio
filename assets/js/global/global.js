@@ -26,7 +26,7 @@ function scrollSpy(){
             if (target.length) {
                 $("html, body").animate(
                     {
-                        scrollTop: target.offset().top - 200,
+                        scrollTop: target.offset().top - 70,
                     },
                     1000,
                     "easeInOutExpo",
