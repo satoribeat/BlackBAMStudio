@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <script src="assets/js/vendor/jquery_easing.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
 
@@ -22,14 +23,14 @@
         <header>
             <a href="#"><img src="assets/images/blackbamstudio_logo.svg" alt="Black BAM Studio"></a>
             <ul>
-                <li><a href="#">ABOUT US</a></li>
-                <li><a href="#">SERVICES</a></li>
-                <li><a href="#">WORKS</a></li>
-                <li><a href="#">NEWS</a></li>
-                <li><a href="#">CREATIVES</a></li>
-                <li><a href="#">OPEN POSITIONS</a></li>
-                <li><a href="#">SPONSORSHIP</a></li>
-                <li><a href="#">CONTACT US</a></li>
+                <li><a class="js-scroll-trigger"" href="#about_us">ABOUT US</a></li>
+                <li><a class="js-scroll-trigger"" href="#our_services">SERVICES</a></li>
+                <li><a class="js-scroll-trigger"" href="#works">WORKS</a></li>
+                <li><a class="js-scroll-trigger"" href="#news">NEWS</a></li>
+                <li><a class="js-scroll-trigger"" href="#creatives">CREATIVES</a></li>
+                <li><a class="js-scroll-trigger"" href="#open_positions">OPEN POSITIONS</a></li>
+                <li><a class="js-scroll-trigger"" href="#">SPONSORSHIP</a></li>
+                <li><a class="js-scroll-trigger"" href="mailto:blackbamstudio@gmail.com">CONTACT US</a></li>
             </ul>
         </header>
         <section id="splash">
@@ -80,15 +81,27 @@
                 <h2>OUR SERVICES</h2>
                 <p>Lorem ipsum dolor sit amet consectetur. Quam tortor non tellus egestas consequat leo. Massa quis proin neque cursus ipsum scelerisque.</p>
                 <ul class="service_tab">
-                    <li class="active"><button>WEBCOMIC / WEBNOVEL COVERS</button></li>
-                    <li><button>WEBTOON AND MANGA CREATION</button></li>
-                    <li><button>CHARACTER DESIGNS</button></li>
+                    <li class="active"><button data-service="one">WEBCOMIC / WEBNOVEL COVERS</button></li>
+                    <li><button data-service="two">WEBTOON AND MANGA CREATION</button></li>
+                    <li><button data-service="three">CHARACTER DESIGNS</button></li>
                 </ul>
                 <ul class="service_content">
-                    <li>
+                    <li class="one active">
                         <img src="assets/images/webcomic_webnovel_covers.png" alt="#">
                         <div>
-                            <a href="mailto:jhaverjangurtiza@gmail.com">CONTACT US</a>
+                            <a href="mailto:blackbamstudio@gmail.com">CONTACT US</a>
+                        </div>
+                    </li>
+                    <li class="two">
+                        <img src="assets/images/webcomic_webnovel_covers.png" alt="#">
+                        <div>
+                            <a href="mailto:blackbamstudio@gmail.com">CONTACT US</a>
+                        </div>
+                    </li>
+                    <li class="three">
+                        <img src="assets/images/webcomic_webnovel_covers.png" alt="#">
+                        <div>
+                            <a href="mailto:blackbamstudio@gmail.com">CONTACT US</a>
                         </div>
                     </li>
                 </ul>
@@ -169,7 +182,7 @@
                                 <h3>KUMACKX</h3>
                                 <h4>ART DIRECTOR</h4>
                                 <p>Lorem ipsum dolor sit amet consectetur. Quam tortor non tellus egestas consequat leo. Massa quis proin neque cursus ipsum scelerisque.</p>
-                                <button>VIEW PORTFOLIO</button>
+                                <button data-toggle="modal" data-target="#portfolio_modal">VIEW PORTFOLIO</button>
                             </li>
                             <li>
                                 <img src="assets/images/kumackx1.png" alt="KUMACKX">
@@ -180,7 +193,7 @@
                                 <h3>KUMACKX</h3>
                                 <h4>ART DIRECTOR</h4>
                                 <p>Lorem ipsum dolor sit amet consectetur. Quam tortor non tellus egestas consequat leo. Massa quis proin neque cursus ipsum scelerisque.</p>
-                                <button>VIEW PORTFOLIO</button>
+                                <button data-toggle="modal" data-target="#portfolio_modal">VIEW PORTFOLIO</button>
                             </li>
                             <li>
                                 <img src="assets/images/kumackx1.png" alt="KUMACKX">
@@ -191,7 +204,7 @@
                                 <h3>KUMACKX</h3>
                                 <h4>ART DIRECTOR</h4>
                                 <p>Lorem ipsum dolor sit amet consectetur. Quam tortor non tellus egestas consequat leo. Massa quis proin neque cursus ipsum scelerisque.</p>
-                                <button>VIEW PORTFOLIO</button>
+                                <button data-toggle="modal" data-target="#portfolio_modal">VIEW PORTFOLIO</button>
                             </li>
                             <li>
                                 <img src="assets/images/kumackx1.png" alt="KUMACKX">
@@ -207,7 +220,7 @@
             <div class="container">
                 <h2>Be ONE of US.</h2>
                 <p>Join us now and work on different webcomic and manga projects!</p>
-                <a href=https://bit.ly/blackbamapplication" >APPLY NOW</a>
+                <a href="https://bit.ly/blackbamapplication" target="_blank">APPLY NOW</a>
                 <span>Available Positions</span>
                 <ul>
                     <li><span>WRITERS</span></li>
@@ -222,10 +235,10 @@
             <div class="container">
                 <a href="#"><img src="assets/images/blackbamstudio_logo_small.svg" alt="Black BAM Studio"></a>
                 <ul>
-                    <li><a href="#" class="facebook"></a></li>
-                    <li><a href="#" class="twitter"></a></li>
-                    <li><a href="#" class="instagram"></a></li>
-                    <li><a href="#" class="youtube"></a></li>
+                    <li><a href="https://www.facebook.com/blackbamstudio" target="_blank" class="facebook"></a></li>
+                    <li><a href="https://twitter.com/blackbamstudio" target="_blank" class="twitter"></a></li>
+                    <li><a href="https://www.instagram.com/blackbamstudio/" target="_blank" class="instagram"></a></li>
+                    <li><a href="https://www.youtube.com/@BlackBAMStudio" target="_blank" class="youtube"></a></li>
                 </ul>
             </div>
             <div class="sub_footer">
@@ -234,6 +247,106 @@
                </div> 
             </div>
         </footer>
-    </div>  
+        <div class="modal fade" id="portfolio_modal" tabindex="-1" aria-labelledby="portfolio_modal_label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>CREATIVES</h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div id="creatives_carousel_modal" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="artist_info">
+                                    <img src="assets/images/kumackx.png" alt="#">
+                                    <h2>KUMACKX</h2>
+                                    <h3>ART DIRECTOR</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur. Quam tortor non tellus egestas consequat leo. Massa quis proin neque cursus ipsum scelerisque. </p>
+                                    <ul class="portfolio_image_list">
+                                        <li><button class="portfolio_image_show active" data-show="1"></button></li>
+                                        <li><button class="portfolio_image_show" data-show="2"></button></li>
+                                        <li><button class="portfolio_image_show" data-show="3"></button></li>
+                                        <li><button class="portfolio_image_show" data-show="4"></button></li>
+                                        <li><button class="portfolio_image_show" data-show="5"></button></li>
+                                        <li><button class="portfolio_image_show" data-show="6"></button></li>
+                                        <li><button class="portfolio_image_show" data-show="7"></button></li>
+                                        <li><button class="portfolio_image_show" data-show="8"></button></li>
+                                        <li><button class="portfolio_image_show" data-show="9"></button></li>
+                                        <li><button class="portfolio_image_show" data-show="10"></button></li>
+                                        <li><button class="portfolio_image_show" data-show="11"></button></li>
+                                        <li><button class="portfolio_image_show" data-show="12"></button></li>
+                                    </ul>
+                                </div>
+                                <ul class="portfolio_image_content">
+                                    <li class="1 active">1</li>
+                                    <li class="2">2</li>
+                                    <li class="3">3</li>
+                                    <li class="4">4</li>
+                                    <li class="5">5</li>
+                                    <li class="6">6</li>
+                                    <li class="7">7</li>
+                                    <li class="8">8</li>
+                                    <li class="9">9</li>
+                                    <li class="10">10</li>
+                                    <li class="11">11</li>
+                                    <li class="12">12</li>
+                                    <li class="13">13</li>
+                                    <li class="14">14</li>
+                                </ul>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="artist_info">
+                                    <img src="assets/images/kumackx.png" alt="#">
+                                    <h2>KUMACKX</h2>
+                                    <h3>ART DIRECTOR</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur. Quam tortor non tellus egestas consequat leo. Massa quis proin neque cursus ipsum scelerisque. </p>
+                                    <ul class="portfolio_image_list">
+                                        <li><button class="portfolio_image_show active" data-show="1"></button></li>
+                                        <li><button class="portfolio_image_show" data-show="2"></button></li>
+                                        <li><button class="portfolio_image_show" data-show="3"></button></li>
+                                        <li><button class="portfolio_image_show" data-show="4"></button></li>
+                                        <li><button class="portfolio_image_show" data-show="5"></button></li>
+                                        <li><button class="portfolio_image_show" data-show="6"></button></li>
+                                        <li><button class="portfolio_image_show" data-show="7"></button></li>
+                                        <li><button class="portfolio_image_show" data-show="8"></button></li>
+                                        <li><button class="portfolio_image_show" data-show="9"></button></li>
+                                        <li><button class="portfolio_image_show" data-show="10"></button></li>
+                                        <li><button class="portfolio_image_show" data-show="11"></button></li>
+                                        <li><button class="portfolio_image_show" data-show="12"></button></li>
+                                    </ul>
+                                </div>
+                                <ul class="portfolio_image_content">
+                                    <li class="1 active">1</li>
+                                    <li class="2">2</li>
+                                    <li class="3">3</li>
+                                    <li class="4">4</li>
+                                    <li class="5">5</li>
+                                    <li class="6">6</li>
+                                    <li class="7">7</li>
+                                    <li class="8">8</li>
+                                    <li class="9">9</li>
+                                    <li class="10">10</li>
+                                    <li class="11">11</li>
+                                    <li class="12">12</li>
+                                    <li class="13">13</li>
+                                    <li class="14">14</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="controls">
+                            <button class="carousel-control-prev" type="button" data-target="#creatives_carousel_modal" data-slide="prev">
+                                 <span>PREV ARTIST</span>
+                             </button>
+                             <button class="carousel-control-next" type="button" data-target="#creatives_carousel_modal" data-slide="next">
+                                 <span>NEXT ARTIST</span>
+                             </button>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
