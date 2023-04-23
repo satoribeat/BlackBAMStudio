@@ -243,31 +243,21 @@ body {
                             vertical-align: top;
                             width: 100%;
                             position: relative;
+                            text-align: center;
+                            padding-top: 50px;
                             &::before {
                                 width: 128px;
                                 height: 125px;
                                 display: inline-block;
                                 vertical-align: top;
                                 content: "";
-                                position: absolute;
-                                top: 44px;
-                                left: 20px;
                             }
                             h4 {
                                 color: #565656;
-                                display: inline-block;
+                                text-align: center;
                                 font: 39px/65px exo2Bold;
                                 letter-spacing: 4px;
-                                margin-left: -13px;
-                                margin-top: 180px;
                                 vertical-align: top;
-                                &::before {
-                                    background-color: #EABC45;
-                                    content: "";
-                                    display: block;
-                                    height: 5px;
-                                    width: 62px;
-                                }
                             }
                         }
                         &:last-child {
@@ -327,14 +317,14 @@ body {
         }
         #our_services {
             background-color: #EFEFEF;
-            padding-top: 138px;
+            padding-top: 90px;
             padding-bottom: 0px;
             h2 {
                 margin-bottom: 34px;
             }
             p {
                 color: #434343;
-                font: 16px/25px exo2Regular, sans-serif;
+                font: 14px/22px exo2Regular, sans-serif;
                 width: 435px;
             }
             ul {
@@ -344,8 +334,9 @@ body {
             }
             .service_tab {
                 border-right: 1px solid #EABC45;
-                margin-top: 59px;
+                margin-top: 0px;
                 width: 393px;
+                margin-bottom: 0px;
                 li {
                     button {
                         border: none;
@@ -371,7 +362,7 @@ body {
                                 display: inline-block;
                                 height: 57px;
                                 position: absolute;
-                                right: -28px;
+                                right: -29px;
                                 top: 31px;
                                 vertical-align: top;
                                 width: 28.5px;
@@ -386,31 +377,24 @@ body {
                 box-shadow: 16px 14px 44px rgba(0, 0, 0, 0.25);
                 height: 411px;
                 margin-left: 58px;
-                margin-top: 55px;
+                margin-top: -17px;
                 mix-blend-mode: normal;
                 position: relative;
                 text-align: center;
                 width: 654px;
                 margin-bottom: -101px;
-
-                &::before {
-                    background-image: url("../images/circle.svg");
-                    content: "";
-                    display: inline-block;
-                    height: 275px;
-                    position: absolute;
-                    right: 44px;
-                    top: -253px;
-                    vertical-align: top;
-                    width: 275px;
-                }
                 li {
                     display: none;
+                    transition: 0.21s;
                     &.active {
                         display: block;
+                        opacity: 1;
                     }
+                    // &:nth-child(1) {
+                    //     display: block;
+                    // }
                     img {
-                        margin-top: -104px;
+                        margin-top: -97px;
                     }
                     div {
                         background-color: #fff;
@@ -443,7 +427,7 @@ body {
         }
         #works {
             margin-top: 50px;
-            padding-top: 97px;
+            padding-top: 160px;
             .container {
                 h2 {
                     margin: 0px 0px 80px 0px;
@@ -481,15 +465,6 @@ body {
                                 display: inline-block;
                                 font: 16px/19px exo2Regular, sans-serif;
                                 vertical-align: top;
-                                &::before {
-                                    background-image: url("../images/heart.svg");
-                                    content: "";
-                                    display: inline-block;
-                                    height: 15.57px;
-                                    margin: 2px 4px 0px 0px;
-                                    vertical-align: top;
-                                    width: 16.92px;
-                                }
                             }
                             &:hover {
                                 div {
@@ -596,6 +571,7 @@ body {
         #creatives {
             background-color: #EFEFEF;
             padding-bottom: 0px;
+            padding-top: 2px;
             .container {
                 h2 {
                     margin: 74px 0px 51px 0px;
@@ -635,7 +611,7 @@ body {
                                 }
                                 p {
                                     color: #434343;
-                                    font: 16px/25px exo2Regular, sans-serif;
+                                    font: 14px/23px exo2Regular, sans-serif;
                                 }
                                 button {
                                     background-color: #EABC45;
@@ -671,29 +647,6 @@ body {
                                 }
                                 &:nth-child(2) {
                                     position: relative;
-                                    &::after {
-                                        background-image: url("../images/line.svg");
-                                        content: "";
-                                        display: inline-block;
-                                        height: 37px;
-                                        position: absolute;
-                                        right: -21px;
-                                        top: 22px;
-                                        vertical-align: top;
-                                        width: 45px;
-                                    }
-                                    &::before {
-                                        background-image: url("../images/line.svg");
-                                        content: "";
-                                        display: inline-block;
-                                        height: 37px;
-                                        left: -21px;
-                                        position: absolute;
-                                        rotate: 90deg;
-                                        top: 433px;
-                                        vertical-align: top;
-                                        width: 45px;
-                                    }
                                 }
                             }
                             &.kumackx {

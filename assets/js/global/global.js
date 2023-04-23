@@ -16,7 +16,7 @@ function headerScroll() {
 /* To scroll spy */
 function scrollSpy(){
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
-        // $("#left_nav_bar").removeClass("show_nav_bar");
+        // $("#left_nav_bar").removeClass("show_navs_bar");
         if (
             location.pathname.replace(/^\//, "") ==
                 this.pathname.replace(/^\//, "") &&
@@ -44,10 +44,11 @@ function scrollSpy(){
 
 /* To show service tab contents */
 function showServices() {
-    let button = $(this);1
+    let button = $(this);
+    // $(".service_content").find(".active").fadeOut();
     button.closest(".container").find(".active").removeClass("active")
     button.closest("li").addClass("active");
-    button.closest(".container").find("." + button.attr("data-service")).addClass("active");
+    $(".service_content").find("." + button.attr("data-service")).addClass("active");
 }
 
 /* To show portfolio images on the modal */
