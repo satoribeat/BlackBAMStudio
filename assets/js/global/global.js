@@ -4,6 +4,18 @@ $(document).ready(function() {
     $("body").on("click", ".service_tab li button", showServices);                  /* To show service tab contents */
     $("body").on("click", ".portfolio_image_show", showPOrtfolioImages);            /* To show portfolio images on the modal */
     $("body").on("click", "button[data-target='#portfolio_modal']", openPortfolio); /* To open portfolio modal */
+
+    $("body").on("click", ".menu_hamburger", function(){
+        if($(this).attr("data-show") == 1) {
+            $("body").removeClass("show_nav");
+            $(this).attr("data-show", 0);
+        }
+        else {
+            $("body").addClass("show_nav");
+            $(this).attr("data-show", 1);
+        }
+    });
+    
 });
 
 /* To show header on scroll */
@@ -16,7 +28,8 @@ function headerScroll() {
 /* To scroll spy */
 function scrollSpy(){
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
-        // $("#left_nav_bar").removeClass("show_navs_bar");
+        $("body").removeClass("show_nav");
+         $(".menu_hamburger").attr("data-show", 0);
         if (
             location.pathname.replace(/^\//, "") ==
                 this.pathname.replace(/^\//, "") &&

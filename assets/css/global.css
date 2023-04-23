@@ -17,6 +17,9 @@
 .container {
   padding: 0px;
 }
+body {
+  transition: 0.21s;
+}
 body .wrapper header {
   padding: 30px 50px;
   position: fixed;
@@ -67,6 +70,21 @@ body .wrapper header ul li:last-child a {
 body .wrapper header ul li:last-child a:hover {
   background-color: #EABC45;
 }
+body .wrapper header .menu_hamburger {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-image: url("../images/humburger_icon.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border: none;
+  background-color: #222222;
+  right: 20px;
+  position: absolute;
+  top: 11px;
+  transition: 0.21s;
+}
 body .wrapper header.nav_visible {
   background-color: #000000;
   padding: 4px 50px;
@@ -76,6 +94,33 @@ body .wrapper header.nav_visible ul li a {
 }
 body .wrapper header.nav_visible ul li:last-child a {
   margin-top: 8px;
+}
+@media screen and (max-width: 1205px) {
+  body .wrapper header ul li a {
+    font: 12px/21px exo2Regular, sans-serif;
+    margin: 0px 12px;
+    margin-top: 9px;
+  }
+  body .wrapper header ul li:last-child a {
+    width: 118px;
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 980px) {
+  body .wrapper header {
+    background-color: #000000;
+    padding: 4px 20px !important;
+  }
+  body .wrapper header ul {
+    display: none;
+    z-index: -1;
+    opacity: 0;
+    top: -100px;
+    transition: 0.21s;
+  }
+  body .wrapper header .menu_hamburger {
+    display: inline-block;
+  }
 }
 body .wrapper #splash {
   background-color: gray;
@@ -142,6 +187,44 @@ body .wrapper #splash .container h1 {
   font: 20px/24px exo2Regular, sans-serif;
   letter-spacing: 4px;
   margin-top: 39px;
+}
+@media screen and (max-width: 980px) {
+  body .wrapper #splash {
+    height: 700px;
+  }
+  body .wrapper #splash #splash_carousel .carousel-inner .carousel-item {
+    height: 700px;
+  }
+}
+@media screen and (max-width: 773px) {
+  body .wrapper #splash .container h2 {
+    font: 60px/73px exo2Bold, sans-serif;
+  }
+  body .wrapper #splash .container h2 span {
+    font: 60px/60px exo2Regular, sans-serif;
+  }
+  body .wrapper #splash .container h3 {
+    width: 350px;
+  }
+  body .wrapper #splash .container h1 {
+    font: 16px/24px exo2Regular, sans-serif;
+    letter-spacing: 2px;
+    margin-top: 12px;
+  }
+}
+@media screen and (max-width: 657px) {
+  body .wrapper #splash #splash_carousel button span {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media screen and (max-width: 581px) {
+  body .wrapper #splash {
+    height: 500px;
+  }
+  body .wrapper #splash #splash_carousel .carousel-inner .carousel-item {
+    height: 500px;
+  }
 }
 body .wrapper #about_us {
   margin-top: -50px;
@@ -281,6 +364,11 @@ body .wrapper #about_us .container > ul li p::after {
   height: 12px;
   margin-top: 20px;
   width: 92px;
+}
+@media screen and (max-width: 980px) {
+  body .wrapper #about_us .container .intro {
+    padding: 37px 34px 33px 304px;
+  }
 }
 body .wrapper #banner {
   background-attachment: fixed;
@@ -787,6 +875,42 @@ body .wrapper > section h2 {
   color: #5F5F5F;
   font: 40px/48px exo2Bold, sans-serif;
   letter-spacing: 3px;
+}
+body.show_nav {
+  overflow: hidden;
+}
+body.show_nav .wrapper header ul {
+  display: block;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  position: absolute;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 10px 60px;
+  opacity: 1;
+  z-index: 3;
+}
+body.show_nav .wrapper header ul li {
+  display: block;
+}
+body.show_nav .wrapper header ul li a {
+  border-bottom: 1px solid #373737;
+  padding-bottom: 15px;
+  display: block;
+  margin-top: 15px;
+}
+body.show_nav .wrapper header ul li:last-child a {
+  border: 1px solid #EABC45;
+  margin: 25px 0px 0px 12px;
+}
+body.show_nav .wrapper header .menu_hamburger {
+  background-image: url("../images/close_nav.svg");
+  background-color: #CCA339;
+  border-radius: 50%;
+  rotate: 180deg;
+  z-index: 6;
 }
 body #portfolio_modal .modal-dialog {
   max-width: 991px;
