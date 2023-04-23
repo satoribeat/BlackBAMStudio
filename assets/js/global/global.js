@@ -1,8 +1,9 @@
 $(document).ready(function() {
-    headerScroll();                                                             /* To show header on scroll */
-    scrollSpy()                                                                 /* To scroll spy */
-    $("body").on("click", ".service_tab li button", showServices);              /* To show service tab contents */
-    $("body").on("click", ".portfolio_image_show", showPOrtfolioImages);        /* To show portfolio images on the modal */
+    headerScroll();                                                                 /* To show header on scroll */
+    scrollSpy()                                                                     /* To scroll spy */
+    $("body").on("click", ".service_tab li button", showServices);                  /* To show service tab contents */
+    $("body").on("click", ".portfolio_image_show", showPOrtfolioImages);            /* To show portfolio images on the modal */
+    $("body").on("click", "button[data-target='#portfolio_modal']", openPortfolio); /* To open portfolio modal */
 });
 
 /* To show header on scroll */
@@ -43,7 +44,7 @@ function scrollSpy(){
 
 /* To show service tab contents */
 function showServices() {
-    let button = $(this);
+    let button = $(this);1
     button.closest(".container").find(".active").removeClass("active")
     button.closest("li").addClass("active");
     button.closest(".container").find("." + button.attr("data-service")).addClass("active");
@@ -52,7 +53,14 @@ function showServices() {
 /* To show portfolio images on the modal */
 function showPOrtfolioImages() {
     let button = $(this);
-    button.closest(".carousel-item").find(".active").removeClass("active");
-    button.addClass("active");
-    button.closest(".carousel-item").find("." + button.attr("data-show")).addClass("active");
+    button.closest(".carousel-item").find(".showcase").removeClass("showcase");
+    button.addClass("showcase");
+    button.closest(".carousel-item").find("." + button.attr("data-show")).addClass("showcase");
+}
+
+/* To open portfolio modal */
+function openPortfolio() {
+    let creatives_profile = $(this).attr("data-creative-profile");
+    $("#creatives_carousel_modal").find(".carousel-inner").find(".active").removeClass("active");
+    $("#creatives_carousel_modal").find("." + creatives_profile).addClass("active");
 }

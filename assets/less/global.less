@@ -96,11 +96,19 @@ body {
             #splash_carousel {
                 .carousel-inner {
                     .carousel-item {
-                        background-image: url("../images/splash1.png");
                         background-position: 50% 50%;
                         background-size: cover;
                         height: 100vh;
                         width: 100%;
+                        &:nth-child(1) {
+                            background-image: url("../images/bg_001.png");
+                        }
+                        &:nth-child(2) {
+                            background-image: url("../images/bg_002.png");
+                        }
+                        &:nth-child(3) {
+                            background-image: url("../images/bg_003.png");
+                        }
                     }
                 }
                 button {
@@ -226,7 +234,7 @@ body {
                         vertical-align: top;
                         width: 350px;
                         > span {
-                            background-color: red;
+                            background-color: #FEF1D0;
                             background-position-x: 100%;
                             border-radius: 20px;
                             display: inline-block;
@@ -234,14 +242,24 @@ body {
                             margin-bottom: 45px;
                             vertical-align: top;
                             width: 100%;
+                            position: relative;
+                            &::before {
+                                width: 128px;
+                                height: 125px;
+                                display: inline-block;
+                                vertical-align: top;
+                                content: "";
+                                position: absolute;
+                                top: 44px;
+                                left: 20px;
+                            }
                             h4 {
-                                color: #fff;
+                                color: #565656;
                                 display: inline-block;
                                 font: 54px/65px exo2Bold;
                                 letter-spacing: 4px;
                                 margin-left: -13px;
                                 margin-top: 180px;
-                                text-shadow: 0px 4px 16px rgba(0, 0, 0, 0.35);
                                 vertical-align: top;
                                 &::before {
                                     background-color: #EABC45;
@@ -254,6 +272,31 @@ body {
                         }
                         &:last-child {
                             margin-right: 0px;
+                        }
+                        &:nth-child(1) {
+                            > span {
+                                &::before {
+                                   background-image: url("../images/mission_icon.svg");
+                                }
+                            }
+                        }
+                        &:nth-child(2) {
+                            > span {
+                                background-color: #EEEEEE;
+                                h4 {
+                                    color: #E4AC1B;
+                                }
+                                &::before {
+                                    background-image: url("../images/vision_icon.svg");
+                                }
+                            }
+                        }
+                        &:nth-child(3) {
+                            > span {
+                                &::before {
+                                    background-image: url("../images/values_icon.svg");
+                                }
+                            }
                         }
                         p {
                             color: #090909;
@@ -273,28 +316,13 @@ body {
                                 width: 92px;
                             }
                         }
-                        &:nth-child(1) {
-                            > span {
-                                background-image: url("../images/img2.png");
-                            }
-                        }
-                        &:nth-child(2) {
-                            > span {
-                                background-image: url("../images/img3.png");
-                            }
-                        }
-                        &:nth-child(3) {
-                            > span {
-                                background-image: url("../images/img1.png");
-                            }
-                        }
                     }
                 }
             }
         }
         #banner {
             background-attachment: fixed;
-            background-image: url("../images/banner.png");
+            background-image: url("../images/BAM_banner.png");
             height: 246px;
         }
         #our_services {
@@ -380,7 +408,7 @@ body {
                         display: block;
                     }
                     img {
-                        margin-top: -122px;
+                        margin-top: -104px;
                     }
                     div {
                         background-color: #fff;
@@ -416,7 +444,7 @@ body {
             padding-top: 48px;
             .container {
                 h2 {
-                    margin: 0px 0px 95px 0px;
+                    margin: 0px 0px 130px 0px;
                 }
                 ul {
                     list-style: none;
@@ -424,7 +452,7 @@ body {
                         display: inline-block;
                         margin-right: 40px;
                         vertical-align: top;
-                        width: 350px;
+                        width: 546px;
                         a {
                             text-decoration: none;
                             div {
@@ -476,7 +504,7 @@ body {
         }
         #news {
             padding-bottom: 0px;
-            // display: none;
+            display: none;
             .container {
                 h2 {
                     margin-bottom: 32px;
@@ -569,6 +597,10 @@ body {
             .container {
                 h2 {
                     margin: 74px 0px 51px 0px;
+                    color: #5F5F5F;
+                    font: 40px/48px exo2Bold, sans-serif;
+                    letter-spacing: 3px;
+                    
                 }
                 #creatives_carousel {
                     .carousel-inner {
@@ -666,7 +698,97 @@ body {
                                 li {
                                     &:first-child {
                                         &::before {
-                                            background-image: url("../images/kumackx.png");
+                                            background-image: url("../images/kumacx_profile.png");
+                                        }
+                                    }
+                                }
+                            }
+                            &.lordhermit {
+                                li {
+                                    &:first-child {
+                                        &::before {
+                                            background-image: url("../images/lordhermit_profile.png");
+                                        }
+                                    }
+                                }
+                            }
+                            &.teddylemon {
+                                li {
+                                    &:first-child {
+                                        &::before {
+                                            background-image: url("../images/teddylemon_profile.png");
+                                        }
+                                    }
+                                }
+                            }
+                            &.dakogoten {
+                                li {
+                                    &:first-child {
+                                        &::before {
+                                            background-image: url("../images/dakogoten_profile.png");
+                                        }
+                                    }
+                                }
+                            }
+                            &.yuoki {
+                                li {
+                                    &:first-child {
+                                        &::before {
+                                            background-image: url("../images/yuoki_profile.png");
+                                        }
+                                    }
+                                }
+                            }
+                            &.srivasya {
+                                li {
+                                    &:first-child {
+                                        &::before {
+                                            background-image: url("../images/srivasya_profile.png");
+                                        }
+                                    }
+                                }
+                            }
+                            &.pasky {
+                                li {
+                                    &:first-child {
+                                        &::before {
+                                            background-image: url("../images/pasky_profile.png");
+                                        }
+                                    }
+                                }
+                            }
+                            &.satoribeat {
+                                li {
+                                    &:first-child {
+                                        &::before {
+                                            background-image: url("../images/satoribeat_profile.png");
+                                        }
+                                    }
+                                }
+                            }
+                            &.xynsnow {
+                                li {
+                                    &:first-child {
+                                        &::before {
+                                            background-image: url("../images/xynsnow_profile.png");
+                                        }
+                                    }
+                                }
+                            }
+                            &.pikapika {
+                                li {
+                                    &:first-child {
+                                        &::before {
+                                            background-image: url("../images/pikapika_profile.png");
+                                        }
+                                    }
+                                }
+                            }
+                            &.mellowrainy {
+                                li {
+                                    &:first-child {
+                                        &::before {
+                                            background-image: url("../images/mellowrainy_profile.png");
                                         }
                                     }
                                 }
@@ -850,6 +972,11 @@ body {
                     font: 24px/28px exo2Bold, sans-serif;
                     letter-spacing: 3px;
                 }
+                button {
+                    span {
+                        color: #fff;
+                    }
+                }
             }
             .modal-content {
                 background-color: transparent;
@@ -858,54 +985,562 @@ body {
                 ul {
                     list-style: none;
                 }
-                .artist_info {
-                    display: inline-block;
-                    position: relative;
-                    vertical-align: top;
-                    width: 433px;
-                    > img {
-                        position: absolute;
-                        top: 35px;
-                        width: 108px;
-                    }
-                    h2 {
-                        color: #fff;
-                        font: 40px/48px exo2Bold, sans-serif;
-                        letter-spacing: 3px;
-                        margin-top: 70px;
-                        padding-left: 129px;
-                    }
-                    h3 {
-                        color: #D1A840;
-                        font: 18px/21px exo2Regular, sans-serif;
-                        padding-left: 129px;
-                    }
-                    p {
-                        color: #fff;
-                        font: 16px/25px exo2Regular, sans-serif;
-                        margin: 19px 0px 61px 0px;
-                    }
-                    .portfolio_image_list{
-                        margin-bottom: 7px;
-                        width: 433px;
-                        li {
-                            background-color: red;
-                            display: inline-block;
-                            height: 132px;
-                            margin-bottom: 11px;
-                            margin-right: 6px;
-                            vertical-align: top;
-                            width: 100px;
-                            &:nth-child(4n+4) {
-                                background-color: blue;
-                                margin-right: 0px;
+                #creatives_carousel_modal {
+                    .carousel-inner {
+                        .carousel-item {
+                            .artist_info {
+                                display: inline-block;
+                                position: relative;
+                                vertical-align: top;
+                                width: 433px;
+                                min-height: 740px;
+                                > img {
+                                    position: absolute;
+                                    top: 35px;
+                                    width: 80px;
+                                    border-radius: 10px;
+                                }
+                                h2 {
+                                    color: #fff;
+                                    font: 30px/27px exo2Bold, sans-serif;
+                                    letter-spacing: 3px;
+                                    margin-top: 59px;
+                                    padding-left: 110px;
+                                }
+                                h3 {
+                                    color: #D1A840;
+                                    font: 18px/21px exo2Regular, sans-serif;
+                                    padding-left: 110px;
+                                }
+                                p {
+                                    color: #fff;
+                                    font: 11px/17px exo2Regular, sans-serif;
+                                    margin: 19px 0px 30px 0px;
+                                }
+                                .portfolio_image_list{
+                                    margin-bottom: 7px;
+                                    width: 433px;
+                                    li {
+                                        background-color: red;
+                                        display: inline-block;
+                                        height: 132px;
+                                        margin-bottom: 11px;
+                                        margin-right: 6px;
+                                        vertical-align: top;
+                                        width: 100px;
+                                        &:nth-child(4n+4) {
+                                            background-color: blue;
+                                            margin-right: 0px;
+                                        }
+                                        button {
+                                            border: none;
+                                            height: 132px;
+                                            width: 100%;
+                                            background-size: cover;
+                                            &.showcase {
+                                                border: 3px solid #EABC45;
+                                            }
+                                        }
+                                    }
+                                }
                             }
-                            button {
-                                border: none;
-                                height: 132px;
-                                width: 100%;
-                                &.active {
-                                    border: 3px solid #EABC45;
+                            &.kumacx_porfolio .artist_info .portfolio_image_list {
+                                li {
+                                    &:nth-child(1) {
+                                        button {
+                                            background-image: url("../images/kumacx_p_001.png");
+                                        }
+                                    }
+                                    &:nth-child(2) {
+                                        button {
+                                            background-image: url("../images/kumacx_p_002.png");
+                                        }
+                                    }
+                                    &:nth-child(3) {
+                                        button {
+                                            background-image: url("../images/kumacx_p_003.png");
+                                        }
+                                    }
+                                    &:nth-child(4) {
+                                        button {
+                                            background-image: url("../images/kumacx_p_004.png");
+                                        }
+                                    }
+                                    &:nth-child(5) {
+                                        button {
+                                            background-image: url("../images/kumacx_p_005.png");
+                                        }
+                                    }
+                                    &:nth-child(6) {
+                                        button {
+                                            background-image: url("../images/kumacx_p_006.png");
+                                        }
+                                    }
+                                    &:nth-child(7) {
+                                        button {
+                                            background-image: url("../images/kumacx_p_007.png");
+                                        }
+                                    }
+                                    &:nth-child(8) {
+                                        button {
+                                            background-image: url("../images/kumacx_p_008.png");
+                                        }
+                                    }
+                                    &:nth-child(9) {
+                                        button {
+                                            background-image: url("../images/kumacx_p_009.png");
+                                        }
+                                    }
+                                    &:nth-child(10) {
+                                        button {
+                                            background-image: url("../images/kumacx_p_010.png");
+                                        }
+                                    }
+                                    &:nth-child(11) {
+                                        button {
+                                            background-image: url("../images/kumacx_p_011.png");
+                                        }
+                                    }
+                                    &:nth-child(12) {
+                                        button {
+                                            background-image: url("../images/kumacx_p_012.png");
+                                        }
+                                    }
+                                }
+                            }
+                            &.lordhermit_porfolio .artist_info .portfolio_image_list {
+                                li {
+                                    &:nth-child(1) {
+                                        button {
+                                            background-image: url("../images/lordhermit_p_001.png");
+                                        }
+                                    }
+                                    &:nth-child(2) {
+                                        button {
+                                            background-image: url("../images/lordhermit_p_002.png");
+                                        }
+                                    }
+                                    &:nth-child(3) {
+                                        button {
+                                            background-image: url("../images/lordhermit_p_003.png");
+                                        }
+                                    }
+                                    &:nth-child(4) {
+                                        button {
+                                            background-image: url("../images/lordhermit_p_004.png");
+                                        }
+                                    }
+                                    &:nth-child(5) {
+                                        button {
+                                            background-image: url("../images/lordhermit_p_005.png");
+                                        }
+                                    }
+                                    &:nth-child(6) {
+                                        button {
+                                            background-image: url("../images/lordhermit_p_006.png");
+                                        }
+                                    }
+                                    &:nth-child(7) {
+                                        button {
+                                            background-image: url("../images/lordhermit_p_007.png");
+                                        }
+                                    }
+                                    &:nth-child(8) {
+                                        button {
+                                            background-image: url("../images/lordhermit_p_008.png");
+                                        }
+                                    }
+                                    &:nth-child(9) {
+                                        button {
+                                            background-image: url("../images/lordhermit_p_009.png");
+                                        }
+                                    }
+                                    &:nth-child(10) {
+                                        button {
+                                            background-image: url("../images/lordhermit_p_010.png");
+                                        }
+                                    }
+                                    &:nth-child(11) {
+                                        button {
+                                            background-image: url("../images/lordhermit_p_011.png");
+                                        }
+                                    }
+                                    &:nth-child(12) {
+                                        button {
+                                            background-image: url("../images/lordhermit_p_012.png");
+                                        }
+                                    }
+                                }
+                            }
+                            &.teddylemon_porfolio .artist_info .portfolio_image_list {
+                                li {
+                                    &:nth-child(1) {
+                                        button {
+                                            background-image: url("../images/teddylemon_p_001.png");
+                                        }
+                                    }
+                                    &:nth-child(2) {
+                                        button {
+                                            background-image: url("../images/teddylemon_p_002.png");
+                                        }
+                                    }
+                                    &:nth-child(3) {
+                                        button {
+                                            background-image: url("../images/teddylemon_p_003.png");
+                                        }
+                                    }
+                                    &:nth-child(4) {
+                                        button {
+                                            background-image: url("../images/teddylemon_p_004.png");
+                                        }
+                                    }
+                                    &:nth-child(5) {
+                                        button {
+                                            background-image: url("../images/teddylemon_p_005.png");
+                                        }
+                                    }
+                                    &:nth-child(6) {
+                                        button {
+                                            background-image: url("../images/teddylemon_p_006.png");
+                                        }
+                                    }
+                                }
+                            }
+                            &.dakogoten_porfolio .artist_info .portfolio_image_list {
+                                li {
+                                    &:nth-child(1) {
+                                        button {
+                                            background-image: url("../images/dakogoten_p_001.png");
+                                        }
+                                    }
+                                    &:nth-child(2) {
+                                        button {
+                                            background-image: url("../images/dakogoten_p_002.png");
+                                        }
+                                    }
+                                    &:nth-child(3) {
+                                        button {
+                                            background-image: url("../images/dakogoten_p_003.png");
+                                        }
+                                    }
+                                }
+                            }
+                            &.yuoki_porfolio .artist_info .portfolio_image_list {
+                                li {
+                                    &:nth-child(1) {
+                                        button {
+                                            background-image: url("../images/yuoki_p_001.png");
+                                        }
+                                    }
+                                    &:nth-child(2) {
+                                        button {
+                                            background-image: url("../images/yuoki_p_002.png");
+                                        }
+                                    }
+                                }
+                            }
+                            &.srivasya_porfolio .artist_info .portfolio_image_list {
+                                li {
+                                    &:nth-child(1) {
+                                        button {
+                                            background-image: url("../images/srivasya_p_001.png");
+                                        }
+                                    }
+                                    &:nth-child(2) {
+                                        button {
+                                            background-image: url("../images/srivasya_p_002.png");
+                                        }
+                                    }
+                                    &:nth-child(3) {
+                                        button {
+                                            background-image: url("../images/srivasya_p_003.png");
+                                        }
+                                    }
+                                    &:nth-child(4) {
+                                        button {
+                                            background-image: url("../images/srivasya_p_004.png");
+                                        }
+                                    }
+                                    &:nth-child(5) {
+                                        button {
+                                            background-image: url("../images/srivasya_p_005.png");
+                                        }
+                                    }
+                                    &:nth-child(6) {
+                                        button {
+                                            background-image: url("../images/srivasya_p_006.png");
+                                        }
+                                    }
+                                    &:nth-child(7) {
+                                        button {
+                                            background-image: url("../images/srivasya_p_007.png");
+                                        }
+                                    }
+                                    &:nth-child(8) {
+                                        button {
+                                            background-image: url("../images/srivasya_p_008.png");
+                                        }
+                                    }
+                                }
+                            }
+                            &.pasky_porfolio .artist_info .portfolio_image_list {
+                                li {
+                                    &:nth-child(1) {
+                                        button {
+                                            background-image: url("../images/pasky_p_001.png");
+                                        }
+                                    }
+                                    &:nth-child(2) {
+                                        button {
+                                            background-image: url("../images/pasky_p_002.png");
+                                        }
+                                    }
+                                    &:nth-child(3) {
+                                        button {
+                                            background-image: url("../images/pasky_p_003.png");
+                                        }
+                                    }
+                                    &:nth-child(4) {
+                                        button {
+                                            background-image: url("../images/pasky_p_004.png");
+                                        }
+                                    }
+                                    &:nth-child(5) {
+                                        button {
+                                            background-image: url("../images/pasky_p_005.png");
+                                        }
+                                    }
+                                    &:nth-child(6) {
+                                        button {
+                                            background-image: url("../images/pasky_p_006.png");
+                                        }
+                                    }
+                                }
+                            }
+                            &.satoribeat_porfolio .artist_info .portfolio_image_list {
+                                li {
+                                    &:nth-child(1) {
+                                        button {
+                                            background-image: url("../images/satoribeat_p_001.png");
+                                        }
+                                    }
+                                    &:nth-child(2) {
+                                        button {
+                                            background-image: url("../images/satoribeat_p_002.png");
+                                        }
+                                    }
+                                    &:nth-child(3) {
+                                        button {
+                                            background-image: url("../images/satoribeat_p_003.png");
+                                        }
+                                    }
+                                    &:nth-child(4) {
+                                        button {
+                                            background-image: url("../images/satoribeat_p_004.png");
+                                        }
+                                    }
+                                    &:nth-child(5) {
+                                        button {
+                                            background-image: url("../images/satoribeat_p_005.png");
+                                        }
+                                    }
+                                    &:nth-child(6) {
+                                        button {
+                                            background-image: url("../images/satoribeat_p_006.png");
+                                        }
+                                    }
+                                    &:nth-child(7) {
+                                        button {
+                                            background-image: url("../images/satoribeat_p_007.png");
+                                        }
+                                    }
+                                    &:nth-child(8) {
+                                        button {
+                                            background-image: url("../images/satoribeat_p_008.png");
+                                        }
+                                    }
+                                    &:nth-child(9) {
+                                        button {
+                                            background-image: url("../images/satoribeat_p_009.png");
+                                        }
+                                    }
+                                    &:nth-child(10) {
+                                        button {
+                                            background-image: url("../images/satoribeat_p_010.png");
+                                        }
+                                    }
+                                    &:nth-child(11) {
+                                        button {
+                                            background-image: url("../images/satoribeat_p_011.png");
+                                        }
+                                    }
+                                    &:nth-child(12) {
+                                        button {
+                                            background-image: url("../images/satoribeat_p_012.png");
+                                        }
+                                    }
+                                }
+                            }
+                            &.xynsnow_porfolio .artist_info .portfolio_image_list {
+                                li {
+                                    &:nth-child(1) {
+                                        button {
+                                            background-image: url("../images/xynsnow_p_001.png");
+                                        }
+                                    }
+                                    &:nth-child(2) {
+                                        button {
+                                            background-image: url("../images/xynsnow_p_002.png");
+                                        }
+                                    }
+                                    &:nth-child(3) {
+                                        button {
+                                            background-image: url("../images/xynsnow_p_003.png");
+                                        }
+                                    }
+                                    &:nth-child(4) {
+                                        button {
+                                            background-image: url("../images/xynsnow_p_004.png");
+                                        }
+                                    }
+                                    &:nth-child(5) {
+                                        button {
+                                            background-image: url("../images/xynsnow_p_005.png");
+                                        }
+                                    }
+                                    &:nth-child(6) {
+                                        button {
+                                            background-image: url("../images/xynsnow_p_006.png");
+                                        }
+                                    }
+                                    &:nth-child(7) {
+                                        button {
+                                            background-image: url("../images/xynsnow_p_007.png");
+                                        }
+                                    }
+                                    &:nth-child(8) {
+                                        button {
+                                            background-image: url("../images/xynsnow_p_008.png");
+                                        }
+                                    }
+                                    &:nth-child(9) {
+                                        button {
+                                            background-image: url("../images/xynsnow_p_009.png");
+                                        }
+                                    }
+                                    &:nth-child(10) {
+                                        button {
+                                            background-image: url("../images/xynsnow_p_010.png");
+                                        }
+                                    }
+                                    &:nth-child(11) {
+                                        button {
+                                            background-image: url("../images/xynsnow_p_011.png");
+                                        }
+                                    }
+                                    &:nth-child(12) {
+                                        button {
+                                            background-image: url("../images/xynsnow_p_012.png");
+                                        }
+                                    }
+                                }
+                            }
+                            &.pikapika_porfolio .artist_info .portfolio_image_list {
+                                li {
+                                    &:nth-child(1) {
+                                        button {
+                                            background-image: url("../images/pikapika_p_001.png");
+                                        }
+                                    }
+                                    &:nth-child(2) {
+                                        button {
+                                            background-image: url("../images/pikapika_p_002.png");
+                                        }
+                                    }
+                                    &:nth-child(3) {
+                                        button {
+                                            background-image: url("../images/pikapika_p_003.png");
+                                        }
+                                    }
+                                    &:nth-child(4) {
+                                        button {
+                                            background-image: url("../images/pikapika_p_004.png");
+                                        }
+                                    }
+                                    &:nth-child(5) {
+                                        button {
+                                            background-image: url("../images/pikapika_p_005.png");
+                                        }
+                                    }
+                                    &:nth-child(6) {
+                                        button {
+                                            background-image: url("../images/pikapika_p_006.png");
+                                        }
+                                    }
+                                }
+                            }
+                            &.mellowrainy_porfolio .artist_info .portfolio_image_list {
+                                li {
+                                    &:nth-child(1) {
+                                        button {
+                                            background-image: url("../images/mellowrainy_p_001.png");
+                                        }
+                                    }
+                                    &:nth-child(2) {
+                                        button {
+                                            background-image: url("../images/mellowrainy_p_002.png");
+                                        }
+                                    }
+                                    &:nth-child(3) {
+                                        button {
+                                            background-image: url("../images/mellowrainy_p_003.png");
+                                        }
+                                    }
+                                    &:nth-child(4) {
+                                        button {
+                                            background-image: url("../images/mellowrainy_p_004.png");
+                                        }
+                                    }
+                                    &:nth-child(5) {
+                                        button {
+                                            background-image: url("../images/mellowrainy_p_005.png");
+                                        }
+                                    }
+                                    &:nth-child(6) {
+                                        button {
+                                            background-image: url("../images/mellowrainy_p_006.png");
+                                        }
+                                    }
+                                    &:nth-child(7) {
+                                        button {
+                                            background-image: url("../images/mellowrainy_p_007.png");
+                                        }
+                                    }
+                                    &:nth-child(8) {
+                                        button {
+                                            background-image: url("../images/mellowrainy_p_008.png");
+                                        }
+                                    }
+                                    &:nth-child(9) {
+                                        button {
+                                            background-image: url("../images/mellowrainy_p_009.png");
+                                        }
+                                    }
+                                    &:nth-child(10) {
+                                        button {
+                                            background-image: url("../images/mellowrainy_p_010.png");
+                                        }
+                                    }
+                                    &:nth-child(11) {
+                                        button {
+                                            background-image: url("../images/mellowrainy_p_011.png");
+                                        }
+                                    }
+                                    &:nth-child(12) {
+                                        button {
+                                            background-image: url("../images/mellowrainy_p_012.png");
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -924,7 +1559,11 @@ body {
                         display: none;
                         height: 692px;
                         width: 506px;
-                        &.active {
+                        img {
+                            height: 692px;
+                            object-fit: cover;
+                        }
+                        &.showcase {
                             display: block;
                         }
                     }
@@ -984,5 +1623,5 @@ body {
     }
 }
 .modal-backdrop.show {
-    opacity: 0.8;
+    opacity: 0.92;
 }
