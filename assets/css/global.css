@@ -226,6 +226,53 @@ body .wrapper #splash .container h1 {
     height: 500px;
   }
 }
+@media screen and (max-width: 550px) {
+  body .wrapper #splash .container h2 {
+    font: 43px/47px exo2Bold, sans-serif;
+  }
+  body .wrapper #splash .container h2 span {
+    font: 43px/47px exo2Bold, sans-serif;
+  }
+  body .wrapper #splash .container h3 {
+    width: 270px;
+    letter-spacing: 26px;
+    font: 17px/34px exo2Regular, sans-serif;
+    height: 51px;
+    padding: 6px 0px 13px 34px;
+  }
+  body .wrapper #splash #splash_carousel button span {
+    width: 40px;
+    height: 40px;
+    background-size: 40%;
+  }
+}
+@media screen and (max-width: 419px) {
+  body .wrapper #splash {
+    height: 400px;
+  }
+  body .wrapper #splash #splash_carousel .carousel-inner .carousel-item {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 419px) {
+  body .wrapper #splash .container h2 {
+    font: 32px/32px exo2Bold, sans-serif;
+  }
+  body .wrapper #splash .container h2 span {
+    font: 32px/32px exo2Bold, sans-serif;
+  }
+  body .wrapper #splash .container h3 {
+    width: 210px;
+    letter-spacing: 26px;
+    font: 17px/34px exo2Regular, sans-serif;
+    height: 38px;
+    letter-spacing: 17px;
+    padding: 0px 0px 12px 24px;
+  }
+  body .wrapper #splash .container h1 {
+    font: 12px/24px exo2Regular, sans-serif;
+  }
+}
 body .wrapper #about_us {
   margin-top: -50px;
   padding-top: 0px;
@@ -368,6 +415,11 @@ body .wrapper #about_us .container > ul li p::after {
 @media screen and (max-width: 980px) {
   body .wrapper #about_us .container .intro {
     padding: 37px 34px 33px 304px;
+  }
+}
+@media screen and (max-width: 770px) {
+  body .wrapper #about_us .container {
+    max-width: 95%;
   }
 }
 body .wrapper #banner {
@@ -641,8 +693,8 @@ body .wrapper #creatives .container #creatives_carousel .carousel-inner .carouse
 }
 body .wrapper #creatives .container #creatives_carousel .carousel-inner .carousel-item li h4 {
   color: #D1A840;
-  font: 18px/22px exo2Regular, sans-serif;
-  letter-spacing: 2px;
+  font: 17px/22px exo2Regular, sans-serif;
+  letter-spacing: 1px;
   margin-bottom: 28px;
   padding-left: 130px;
 }
@@ -684,6 +736,9 @@ body .wrapper #creatives .container #creatives_carousel .carousel-inner .carouse
 }
 body .wrapper #creatives .container #creatives_carousel .carousel-inner .carousel-item li:nth-child(2) {
   position: relative;
+}
+body .wrapper #creatives .container #creatives_carousel .carousel-inner .carousel-item.rohan li:first-child::before {
+  background-image: url("../images/rohan_profile.png");
 }
 body .wrapper #creatives .container #creatives_carousel .carousel-inner .carousel-item.kumackx li:first-child::before {
   background-image: url("../images/kumacx_profile.png");
@@ -990,6 +1045,74 @@ body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .ca
 }
 body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .artist_info .portfolio_image_list li button.showcase {
   border: 3px solid #EABC45;
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .writer {
+  width: 100% !important;
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .writer p {
+  width: 60%;
+  margin-bottom: 20px !important;
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .writer ul {
+  border-top: 1px solid #616161;
+  padding-top: 40PX;
+  margin-top: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .writer ul li {
+  display: inline-block;
+  vertical-align: top;
+  width: 313px;
+  margin-right: 20px;
+  position: relative;
+  padding-left: 132px;
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .writer ul li:last-child {
+  margin-right: 0px;
+  padding-left: 155px;
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .writer ul li:last-child a span {
+  margin-top: 2px;
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .writer ul li p {
+  width: 100%;
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .writer ul li > img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .writer ul li h3 {
+  padding-left: 0px;
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .writer ul li a {
+  margin-bottom: 15px;
+  display: inline-block;
+  vertical-align: top;
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .writer ul li a img {
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .writer ul li a span {
+  font: 12px/17px exo2Regular, sans-serif;
+  color: #00D464;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 105px;
+  margin-top: 10px;
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .writer ul li a span.tapas {
+  color: #FFCE2A;
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .writer ul li a span.voiceme {
+  color: #C470FB;
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .writer ul li a:hover span {
+  text-decoration: underline;
 }
 body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item.kumacx_porfolio .artist_info .portfolio_image_list li:nth-child(1) button {
   background-image: url("../images/kumacx_p_001.png");
