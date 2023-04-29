@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://localhost:8888/dashboard/products# -->
+<html lang="en"><script async="false" type="text/javascript" src="chrome-extension://fnjhmkhhmkbjkkabndcnnogagogbneec/in-page.js"></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+
+    <script src="./Products_files/jquery.min.js"></script>
+    <script src="./Products_files/popper.min.js"></script>
+    <script src="./Products_files/bootstrap.min.js"></script>
+    <script src="./Products_files/bootstrap-select.min.js"></script>
+    <link rel="stylesheet" href="./Products_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./Products_files/bootstrap-select.min.css">
+
+    <link rel="stylesheet" href="./Products_files/admin_global.css">
+    <script src="./Products_files/admin_products.js"></script>
+</head>
+<body data-new-gr-c-s-check-loaded="14.1106.0" data-gr-ext-installed="" class="modal-open" style="padding-right: 15px;">
+    <div class="wrapper">
+        <header>
+            <h1>Let’s provide fresh items for everyone.</h1>
+            <h2>Products</h2>
+            <div>
+                <button class="switch">Switch to Shop View</button>
+                <button class="profile">
+                    <img src="./Products_files/profile.png" alt="#">
+                </button>
+            </div>
+        </header>
+        <aside>
+            <a href="http://localhost:8888/dashboard/products#"><img src="./Products_files/organi_shop_logo_dark.svg" alt="Organic Shop"></a>
+            <ul>
+                <li><a href="http://localhost:8888/dashboard/products#">Orders</a></li>
+                <li class="active"><a href="http://localhost:8888/dashboard/products#">Products</a></li>
+            </ul>
+        </aside>
+        <section>
+            <form action="http://localhost:8888/dashboard/process.php" method="post" class="search_form">
+                <input type="text" name="search" placeholder="Search Products">
+            </form>
+            <button class="add_product" data-toggle="modal" data-target="#add_product_modal">Add Product</button>
+            <form action="http://localhost:8888/process/process.php" method="post" class="categories_form">
+                <h3>Categories</h3>
+                <ul>
+                    <li>
+                        <button type="submit" class="active" data-category="all_products" data-category-name="All Products">
+                            <span>30</span><img src="./Products_files/apple.png" alt="#"><h4>All Products</h4>
+                        </button>
+                    </li>
+                    
+    
+    <li>
+        <button type="submit" data-category="1" data-category-name="fruits">
+            <span>6</span><img src="./Products_files/apple.png" alt="#"><h4>fruits</h4>
+        </button>
+    </li>
+
+    
+    <li>
+        <button type="submit" data-category="2" data-category-name="vegetables">
+            <span>6</span><img src="./Products_files/apple.png" alt="#"><h4>vegetables</h4>
+        </button>
+    </li>
+
+    
+    <li>
+        <button type="submit" data-category="3" data-category-name="grains">
+            <span>6</span><img src="./Products_files/apple.png" alt="#"><h4>grains</h4>
+        </button>
+    </li>
+
+    
+    <li>
+        <button type="submit" data-category="4" data-category-name="meat">
+            <span>6</span><img src="./Products_files/apple.png" alt="#"><h4>meat</h4>
+        </button>
+    </li>
+
+    
+    <li>
+        <button type="submit" data-category="5" data-category-name="diary">
+            <span>6</span><img src="./Products_files/apple.png" alt="#"><h4>diary</h4>
+        </button>
+    </li>
+
+    
+    <li>
+        <button type="submit" data-category="6" data-category-name="yey">
+            <span>0</span><img src="./Products_files/apple.png" alt="#"><h4>yey</h4>
+        </button>
+    </li>
+                </ul>
+                <input type="hidden" name="action" value="filter_category">
+                <input type="hidden" name="category">
+                <input type="hidden" name="category_name">
+            </form>
+            <div>
+                <table class="products_table">
+                    <thead>
+                        <tr>
+                            <th><h3>All Products</h3></th>
+                            <th>ID #</th>
+                            <th>Price</th>
+                            <th>Caregory</th>
+                            <th>Inventory</th>
+                            <th>Sold</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Apple                                    </span>
+                                </td>
+                                <td><span>1</span></td>
+                                <td><span>$ 10</span></td>
+                                <td><span>fruits</span></td>
+                                <td><span>100</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="1">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Banana                                    </span>
+                                </td>
+                                <td><span>3</span></td>
+                                <td><span>$ 50</span></td>
+                                <td><span>fruits</span></td>
+                                <td><span>143</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="3">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Barley                                    </span>
+                                </td>
+                                <td><span>24</span></td>
+                                <td><span>$ 424</span></td>
+                                <td><span>grains</span></td>
+                                <td><span>622</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="24">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Beef                                    </span>
+                                </td>
+                                <td><span>12</span></td>
+                                <td><span>$ 569</span></td>
+                                <td><span>meat</span></td>
+                                <td><span>145</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="12">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Beef Steak                                    </span>
+                                </td>
+                                <td><span>25</span></td>
+                                <td><span>$ 123</span></td>
+                                <td><span>meat</span></td>
+                                <td><span>634</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="25">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Black Rice                                    </span>
+                                </td>
+                                <td><span>7</span></td>
+                                <td><span>$ 68</span></td>
+                                <td><span>grains</span></td>
+                                <td><span>46</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="7">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Brocolli                                    </span>
+                                </td>
+                                <td><span>21</span></td>
+                                <td><span>$ 45</span></td>
+                                <td><span>vegetables</span></td>
+                                <td><span>312</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="21">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Brown Rice                                    </span>
+                                </td>
+                                <td><span>9</span></td>
+                                <td><span>$ 97</span></td>
+                                <td><span>grains</span></td>
+                                <td><span>64</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="9">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Bulgur                                    </span>
+                                </td>
+                                <td><span>23</span></td>
+                                <td><span>$ 234</span></td>
+                                <td><span>grains</span></td>
+                                <td><span>252</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="23">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Butter                                    </span>
+                                </td>
+                                <td><span>15</span></td>
+                                <td><span>$ 78</span></td>
+                                <td><span>diary</span></td>
+                                <td><span>124</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="15">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Carrots                                    </span>
+                                </td>
+                                <td><span>5</span></td>
+                                <td><span>$ 30</span></td>
+                                <td><span>vegetables</span></td>
+                                <td><span>45</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="5">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Cheese                                    </span>
+                                </td>
+                                <td><span>28</span></td>
+                                <td><span>$ 112</span></td>
+                                <td><span>diary</span></td>
+                                <td><span>423</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="28">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Chicken (Whole)                                    </span>
+                                </td>
+                                <td><span>10</span></td>
+                                <td><span>$ 300</span></td>
+                                <td><span>meat</span></td>
+                                <td><span>123</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="10">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Custard                                    </span>
+                                </td>
+                                <td><span>29</span></td>
+                                <td><span>$ 213</span></td>
+                                <td><span>diary</span></td>
+                                <td><span>235</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="29">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Fermented Milk                                    </span>
+                                </td>
+                                <td><span>30</span></td>
+                                <td><span>$ 312</span></td>
+                                <td><span>diary</span></td>
+                                <td><span>12</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="30">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Grapes                                    </span>
+                                </td>
+                                <td><span>16</span></td>
+                                <td><span>$ 134</span></td>
+                                <td><span>fruits</span></td>
+                                <td><span>124</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="16">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Ground Beef                                    </span>
+                                </td>
+                                <td><span>26</span></td>
+                                <td><span>$ 424</span></td>
+                                <td><span>meat</span></td>
+                                <td><span>123</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="26">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Itik                                    </span>
+                                </td>
+                                <td><span>27</span></td>
+                                <td><span>$ 224</span></td>
+                                <td><span>meat</span></td>
+                                <td><span>63</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="27">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Lemon                                    </span>
+                                </td>
+                                <td><span>18</span></td>
+                                <td><span>$ 73</span></td>
+                                <td><span>fruits</span></td>
+                                <td><span>34</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="18">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Milk                                    </span>
+                                </td>
+                                <td><span>13</span></td>
+                                <td><span>$ 125</span></td>
+                                <td><span>diary</span></td>
+                                <td><span>1423</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="13">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Millet                                    </span>
+                                </td>
+                                <td><span>8</span></td>
+                                <td><span>$ 89</span></td>
+                                <td><span>grains</span></td>
+                                <td><span>87</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="8">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Onion                                    </span>
+                                </td>
+                                <td><span>20</span></td>
+                                <td><span>$ 67</span></td>
+                                <td><span>vegetables</span></td>
+                                <td><span>623</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="20">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Orange                                    </span>
+                                </td>
+                                <td><span>2</span></td>
+                                <td><span>$ 15</span></td>
+                                <td><span>fruits</span></td>
+                                <td><span>50</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="2">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Porkchop                                    </span>
+                                </td>
+                                <td><span>11</span></td>
+                                <td><span>$ 452</span></td>
+                                <td><span>meat</span></td>
+                                <td><span>412</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="11">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Potato                                    </span>
+                                </td>
+                                <td><span>19</span></td>
+                                <td><span>$ 45</span></td>
+                                <td><span>vegetables</span></td>
+                                <td><span>156</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="19">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Red Rice                                    </span>
+                                </td>
+                                <td><span>22</span></td>
+                                <td><span>$ 653</span></td>
+                                <td><span>grains</span></td>
+                                <td><span>523</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="22">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Squash                                    </span>
+                                </td>
+                                <td><span>4</span></td>
+                                <td><span>$ 45</span></td>
+                                <td><span>vegetables</span></td>
+                                <td><span>123</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="4">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Tomato                                    </span>
+                                </td>
+                                <td><span>6</span></td>
+                                <td><span>$ 20</span></td>
+                                <td><span>vegetables</span></td>
+                                <td><span>78</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="6">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Watermelon                                    </span>
+                                </td>
+                                <td><span>17</span></td>
+                                <td><span>$ 68</span></td>
+                                <td><span>fruits</span></td>
+                                <td><span>12</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="17">
+                                    </form>
+                                </td>
+                            </tr>
+                                                    <tr>
+                                <td>
+                                    <span>
+                                        <img src="./Products_files/food.png" alt="#">Yogurt                                    </span>
+                                </td>
+                                <td><span>14</span></td>
+                                <td><span>$ 238</span></td>
+                                <td><span>diary</span></td>
+                                <td><span>341</span></td>
+                                <td><span>1</span></td>
+                                <td>
+                                    <span>
+                                        <button class="edit_product">Edit</button>
+                                        <button class="delete_product"></button>
+                                    </span>
+                                    <form action="http://localhost:8888/dashboard/process.php" method="post">
+                                        <p>Are you sure you want to remove this item?</p>
+                                        <button type="button" class="cancel_remove">Cancel</button>
+                                        <button type="submit">Remove</button>
+                                        <input type="hidden" name="action" value="delete_product">
+                                        <input type="hidden" name="product_id" value="14">
+                                    </form>
+                                </td>
+                            </tr>
+                                            </tbody>
+                </table>
+            </div>
+        </section>
+        <div class="modal fade form_modal show" id="add_product_modal" tabindex="-1" style="padding-right: 15px; display: block;" aria-modal="true" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <button data-dismiss="modal" aria-label="Close" class="close_modal"></button>
+                    <form action="http://localhost:8888/process/process.php" method="post" class="add_product_form">
+                        <h2>Add a Product</h2>
+                        <ul>
+                            <li>
+                                <input type="text" name="prouct_name" required="">
+                                <label>Product Name</label>
+                            </li>
+                            <li>
+                                <textarea name="description" required=""></textarea>
+                                <label>Description</label>
+                            </li>
+                            <li>
+                                <label>Category</label>
+                                <div class="dropdown bootstrap-select"><select class="selectpicker" tabindex="-98">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown" role="combobox" aria-owns="bs-select-1" aria-haspopup="listbox" aria-expanded="false" title="Mustard"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">Mustard</div></div> </div></button><div class="dropdown-menu "><div class="inner show" role="listbox" id="bs-select-1" tabindex="-1"><ul class="dropdown-menu inner show" role="presentation"></ul></div></div></div>
+                            </li>
+                            <li>
+                                <input type="number" name="price" value="1" required="">
+                                <label>Price</label>
+                            </li>
+                            <li>
+                                <input type="number" name="inventory" value="1" required="">
+                                <label>Inventory</label>
+                            </li>
+                            <li>
+                                <label>Upload Images (4 Max)</label>
+                                <button type="button" class="upload_image"></button>
+                                <ul class="image_preview_list">
+
+
+
+
+
+    <li>
+        <button type="button" class="delete_image" data-image-index="0"></button>
+        <img src="./Products_files/1682323892_service_3.png" alt="image">
+    </li>
+    <li>
+        <button type="button" class="delete_image" data-image-index="1"></button>
+        <img src="./Products_files/1682323892_service_2.png" alt="image">
+    </li>
+    <li>
+        <button type="button" class="delete_image" data-image-index="2"></button>
+        <img src="./Products_files/1682323892_service_1.png" alt="image">
+    </li>
+    <li>
+        <button type="button" class="delete_image" data-image-index="3"></button>
+        <img src="./Products_files/1682323892_bg_002.png" alt="image">
+    </li>
+</ul>
+                                <input type="file" name="images[]" accept="image/*" multiple="" class="image_input">
+                                <input type="hidden" name="images_data">
+                            </li>
+                        </ul>
+                        <button type="button" data-dismiss="modal" aria-label="Close">Cancel</button>
+                        <button type="submit">Save</button>
+                        <input type="hidden" class="form_data_action" name="action" value="add_product">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popover_overlay"></div>
+
+<div class="modal-backdrop fade show"></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+  div.grammarly-desktop-integration {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+  }
+
+  div.grammarly-desktop-integration:before {
+    content: attr(data-content);
+  }
+</style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
