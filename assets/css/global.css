@@ -2084,6 +2084,9 @@ body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .co
   body #portfolio_modal .modal-dialog .modal-header h2 {
     font: 18px/28px exo2Bold, sans-serif;
   }
+  body #portfolio_modal .modal-dialog .modal-content {
+    padding-bottom: 90px;
+  }
   body #portfolio_modal .modal-dialog .modal-content .portfolio_image_content {
     width: 366px;
     height: auto;
@@ -2098,6 +2101,9 @@ body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .co
   }
   body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .controls {
     margin-top: 15px;
+  }
+  body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .writer ul li {
+    margin-bottom: 30px;
   }
   body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .artist_info {
     min-height: 540px;
@@ -2114,25 +2120,74 @@ body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .co
     height: 92px;
   }
 }
+@media screen and (max-width: 900px) {
+  body #portfolio_modal .modal-dialog {
+    max-width: 100%;
+    padding: 0px 20px;
+  }
+}
 @media screen and (max-width: 893px) {
   body #portfolio_modal .modal-dialog {
     width: 100%;
-    padding: 0px 30px;
+    padding: 0px 20px;
     text-align: center;
+  }
+  body #portfolio_modal .modal-dialog .modal-content .portfolio_image_content {
+    margin-left: 0px;
+    width: 100%;
+  }
+  body #portfolio_modal .modal-dialog .modal-content .portfolio_image_content li {
+    width: 100%;
+  }
+  body #portfolio_modal .modal-dialog .modal-content .portfolio_image_content li img {
+    width: 100%;
+  }
+  body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-control-prev,
+  body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-control-next {
+    width: 105px;
+  }
+  body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .controls {
+    width: 220px !important;
   }
   body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .artist_info {
     width: 263px;
     text-align: left;
+    min-height: 0px;
+  }
+  body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .artist_info h2 {
+    font: 21px/16px exo2Bold, sans-serif;
+    margin-top: 30px;
+    padding-left: 74px;
+  }
+  body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .artist_info h3 {
+    font: 13px/14px exo2Regular, sans-serif;
+    padding-left: 74px;
+  }
+  body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .artist_info p {
+    width: 100%;
+  }
+  body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .artist_info > img {
+    width: 54px;
+    top: 21px;
   }
   body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .artist_info .portfolio_image_list {
     width: 319px;
+    height: 72px;
   }
   body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .artist_info .portfolio_image_list li {
-    width: 53px;
-    height: 72px;
+    width: 41px;
+    height: 52px;
   }
   body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .artist_info .portfolio_image_list li button {
-    height: 72px;
+    height: 52px;
+  }
+}
+@media screen and (max-width: 893px) {
+  body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .artist_info {
+    width: 100%;
+  }
+  body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .artist_info .portfolio_image_list {
+    width: 100%;
   }
 }
 .modal-backdrop.show {
