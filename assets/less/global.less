@@ -640,6 +640,9 @@ body {
             background-image: url("../images/BAM_banner.png");
             height: 246px;
             background-size: contain;
+            @media screen and (max-width: 761px) {
+                height: 166px;
+            }
         }
         #our_services {
             background-color: #EFEFEF;
@@ -2672,6 +2675,73 @@ body {
                     }
                 }
             }
+        }
+        @media screen and (max-width: 1200px) {
+            .modal-dialog {
+                width: 851px;
+                .modal-header h2 {
+                    font: 18px/28px exo2Bold, sans-serif;
+                }
+                .modal-content {
+                    .portfolio_image_content {
+                        width: 366px;
+                        height: auto;
+                        li {
+                            width: 366px;
+                            height: auto;
+                            img {
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+
+                    #creatives_carousel_modal {
+                        .controls  {
+                            margin-top: 15px;
+                        }
+                        .carousel-inner .carousel-item .artist_info {
+                            min-height: 540px;
+                            .portfolio_image_list {
+                                width: 471px;
+                                li {
+                                    width: 63px;
+                                    height: 92px;
+                                    margin-right: 10px !important;
+                                    button {
+                                        height: 92px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+        @media screen and (max-width: 893px) {
+            .modal-dialog {
+                width: 100%;
+                padding: 0px 30px;
+                text-align: center;
+                .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .artist_info {
+                    width: 263px;
+                    text-align: left;
+                    .portfolio_image_list {
+                        width: 319px;
+                        li {
+                            width: 53px;
+                            height: 72px;
+                            button {
+                                height: 72px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 775px) {
+            
         }
     }
 }

@@ -564,6 +564,11 @@ body .wrapper #banner {
   height: 246px;
   background-size: contain;
 }
+@media screen and (max-width: 761px) {
+  body .wrapper #banner {
+    height: 166px;
+  }
+}
 body .wrapper #our_services {
   background-color: #EFEFEF;
   padding-top: 90px;
@@ -2071,6 +2076,64 @@ body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .co
   right: 0px;
   vertical-align: top;
   width: 320px;
+}
+@media screen and (max-width: 1200px) {
+  body #portfolio_modal .modal-dialog {
+    width: 851px;
+  }
+  body #portfolio_modal .modal-dialog .modal-header h2 {
+    font: 18px/28px exo2Bold, sans-serif;
+  }
+  body #portfolio_modal .modal-dialog .modal-content .portfolio_image_content {
+    width: 366px;
+    height: auto;
+  }
+  body #portfolio_modal .modal-dialog .modal-content .portfolio_image_content li {
+    width: 366px;
+    height: auto;
+  }
+  body #portfolio_modal .modal-dialog .modal-content .portfolio_image_content li img {
+    width: 100%;
+    height: auto;
+  }
+  body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .controls {
+    margin-top: 15px;
+  }
+  body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .artist_info {
+    min-height: 540px;
+  }
+  body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .artist_info .portfolio_image_list {
+    width: 471px;
+  }
+  body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .artist_info .portfolio_image_list li {
+    width: 63px;
+    height: 92px;
+    margin-right: 10px !important;
+  }
+  body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .artist_info .portfolio_image_list li button {
+    height: 92px;
+  }
+}
+@media screen and (max-width: 893px) {
+  body #portfolio_modal .modal-dialog {
+    width: 100%;
+    padding: 0px 30px;
+    text-align: center;
+  }
+  body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .artist_info {
+    width: 263px;
+    text-align: left;
+  }
+  body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .artist_info .portfolio_image_list {
+    width: 319px;
+  }
+  body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .artist_info .portfolio_image_list li {
+    width: 53px;
+    height: 72px;
+  }
+  body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .artist_info .portfolio_image_list li button {
+    height: 72px;
+  }
 }
 .modal-backdrop.show {
   opacity: 0.92;
