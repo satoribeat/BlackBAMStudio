@@ -172,7 +172,7 @@ body .wrapper #splash #splash_carousel button span {
   width: 95px;
 }
 body .wrapper #splash #splash_carousel button.carousel-control-next span {
-  rotate: 180deg;
+  transform: rotate(180deg);
 }
 body .wrapper #splash .container {
   left: 50%;
@@ -840,10 +840,10 @@ body .wrapper #works .container ul li {
   vertical-align: top;
   width: 546px;
 }
-body .wrapper #works .container ul li a {
+body .wrapper #works .container ul li > div {
   text-decoration: none;
 }
-body .wrapper #works .container ul li a div {
+body .wrapper #works .container ul li > div div {
   background-color: #E3E3E3;
   height: 190px;
   margin-bottom: 26px;
@@ -851,24 +851,42 @@ body .wrapper #works .container ul li a div {
   transition: 0.21s;
   width: 100%;
 }
-body .wrapper #works .container ul li a div img {
+body .wrapper #works .container ul li > div div img {
   bottom: 0px;
   left: 50%;
   position: absolute;
   transform: translateX(-50%);
 }
-body .wrapper #works .container ul li a h3 {
+body .wrapper #works .container ul li > div h3 {
   color: #252525;
   font: 20px/24px exo2Bold, sans-serif;
   margin-bottom: 6px;
 }
-body .wrapper #works .container ul li a span {
+body .wrapper #works .container ul li > div span {
   color: #EABC45;
   display: inline-block;
   font: 16px/19px exo2Regular, sans-serif;
   vertical-align: top;
 }
-body .wrapper #works .container ul li a:hover div {
+body .wrapper #works .container ul li > div a {
+  margin-right: 20px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 5px;
+}
+body .wrapper #works .container ul li > div a span {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+body .wrapper #works .container ul li > div a.webtoon span {
+  color: #00D464;
+}
+body .wrapper #works .container ul li > div a.voyceme span {
+  color: #C470FB;
+}
+body .wrapper #works .container ul li > div:hover div {
   background-color: #E0B344;
 }
 body .wrapper #works .container ul li:last-child {
@@ -881,10 +899,10 @@ body .wrapper #works .container ul li:last-child {
   body .wrapper #works .container ul li {
     width: 47%;
   }
-  body .wrapper #works .container ul li a div {
+  body .wrapper #works .container ul li > div div {
     height: 118px;
   }
-  body .wrapper #works .container ul li a div img {
+  body .wrapper #works .container ul li > div div img {
     width: 332px;
   }
 }
@@ -905,10 +923,10 @@ body .wrapper #works .container ul li:last-child {
   }
 }
 @media screen and (max-width: 718px) {
-  body .wrapper #works .container ul li a div {
+  body .wrapper #works .container ul li > div div {
     height: 95px;
   }
-  body .wrapper #works .container ul li a div img {
+  body .wrapper #works .container ul li > div div img {
     width: 272px;
   }
 }
@@ -925,7 +943,7 @@ body .wrapper #works .container ul li:last-child {
   body .wrapper #works .container h2 {
     margin-bottom: 78px;
   }
-  body .wrapper #works .container ul li a div img {
+  body .wrapper #works .container ul li > div div img {
     width: 219px;
   }
 }
@@ -933,30 +951,30 @@ body .wrapper #works .container ul li:last-child {
   body .wrapper #works .container ul li {
     margin-right: 16px;
   }
-  body .wrapper #works .container ul li a h3 {
+  body .wrapper #works .container ul li > div h3 {
     font: 17px/17px exo2Bold, sans-serif;
   }
 }
 @media screen and (max-width: 499px) {
-  body .wrapper #works .container ul li a div {
+  body .wrapper #works .container ul li > div div {
     height: 68px;
   }
-  body .wrapper #works .container ul li a div img {
+  body .wrapper #works .container ul li > div div img {
     width: 193px;
   }
 }
 @media screen and (max-width: 447px) {
-  body .wrapper #works .container ul li a h3 {
+  body .wrapper #works .container ul li > div h3 {
     font: 14px/19px exo2Bold, sans-serif;
   }
-  body .wrapper #works .container ul li a span {
+  body .wrapper #works .container ul li > div span {
     font: 12px/12px exo2Regular, sans-serif;
   }
-  body .wrapper #works .container ul li a div {
+  body .wrapper #works .container ul li > div div {
     height: 57px;
     margin-bottom: 15px;
   }
-  body .wrapper #works .container ul li a div img {
+  body .wrapper #works .container ul li > div div img {
     width: 160px;
   }
 }
@@ -971,10 +989,10 @@ body .wrapper #works .container ul li:last-child {
   body .wrapper #works .container ul li:first-child {
     margin-bottom: 102px;
   }
-  body .wrapper #works .container ul li a div {
+  body .wrapper #works .container ul li > div div {
     height: 92px;
   }
-  body .wrapper #works .container ul li a div img {
+  body .wrapper #works .container ul li > div div img {
     width: 260px;
   }
 }
@@ -1696,9 +1714,6 @@ body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .ca
 body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .writer ul li:last-child {
   margin-right: 0px;
   padding-left: 155px;
-}
-body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .writer ul li:last-child a span {
-  margin-top: 2px;
 }
 body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item .writer ul li p {
   width: 100%;

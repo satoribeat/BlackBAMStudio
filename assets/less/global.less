@@ -181,7 +181,7 @@ body {
                     }
                     &.carousel-control-next {
                         span {
-                            rotate: 180deg;
+                            transform: rotate(180deg);
                         }
                     }
                 }
@@ -945,7 +945,7 @@ body {
                         margin-right: 40px;
                         vertical-align: top;
                         width: 546px;
-                        a {
+                        > div {
                             text-decoration: none;
                             div {
                                 background-color: #E3E3E3;
@@ -972,6 +972,28 @@ body {
                                 font: 16px/19px exo2Regular, sans-serif;
                                 vertical-align: top;
                             }
+                            a {
+                                margin-right: 20px;
+                                display: inline-block;
+                                vertical-align: top;
+                                margin-top: 5px;
+                                span {
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    margin-top: 10px;
+                                    margin-left: 10px;
+                                }
+                                &.webtoon {
+                                    span {
+                                        color: #00D464;
+                                    }
+                                }
+                                &.voyceme {
+                                    span {
+                                        color: #C470FB;
+                                    }
+                                }
+                            }
                             &:hover {
                                 div {
                                     background-color: #E0B344;
@@ -990,7 +1012,7 @@ body {
                     ul {
                         li {
                             width: 47%;
-                            a {
+                            >div {
                                 div {
                                     height: 118px;
                                     img {
@@ -1024,7 +1046,7 @@ body {
                 .container {
                     ul {
                         li {
-                            a {
+                            >div {
                                 div {
                                     height: 95px;
                                     img {
@@ -1052,7 +1074,7 @@ body {
                     }
                     ul {
                         li {
-                            a {
+                            >div {
                                 div {
                                     img {
                                         width: 219px;
@@ -1068,7 +1090,7 @@ body {
                     ul {
                         li {
                             margin-right: 16px;
-                            a {
+                            >div {
                                 h3 {
                                     font: 17px/17px exo2Bold, sans-serif;
                                 }
@@ -1081,7 +1103,7 @@ body {
                 .container {
                     ul {
                         li {
-                            a {
+                            >div {
                                 div {
                                     height: 68px;
                                     img {
@@ -1097,7 +1119,7 @@ body {
                 .container {
                     ul {
                         li {
-                            a {
+                            >div {
                                 h3 {
                                     font: 14px/19px exo2Bold, sans-serif;
                                 }
@@ -1128,7 +1150,7 @@ body {
                             &:first-child {
                                 margin-bottom: 102px;
                             }
-                            a {
+                            >div {
                                 div {
                                     height: 92px;
                                     img {
@@ -2049,11 +2071,11 @@ body {
                                         &:last-child {
                                             margin-right: 0px;
                                             padding-left: 155px;
-                                            a {
-                                                span {
-                                                    margin-top: 2px;
-                                                }
-                                            }
+                                            // a {
+                                            //     span {
+                                            //         margin-top: 2px;
+                                            //     }
+                                            // }
                                         }
                                         p {
                                             width: 100%;
