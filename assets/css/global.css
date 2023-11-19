@@ -837,6 +837,7 @@ body .wrapper #works .container ul {
 body .wrapper #works .container ul li {
   display: inline-block;
   margin-right: 40px;
+  margin-bottom: 220px;
   vertical-align: top;
   width: 546px;
 }
@@ -886,11 +887,25 @@ body .wrapper #works .container ul li > div a.webtoon span {
 body .wrapper #works .container ul li > div a.voyceme span {
   color: #C470FB;
 }
+body .wrapper #works .container ul li > div a.coming_soon {
+  pointer-events: none;
+}
+body .wrapper #works .container ul li > div a.coming_soon span {
+  color: #E0B344;
+}
 body .wrapper #works .container ul li > div:hover div {
   background-color: #E0B344;
 }
-body .wrapper #works .container ul li:last-child {
-  margin: 0px;
+body .wrapper #works .container ul li:nth-child(2n+2) {
+  margin-right: 0px;
+}
+body .wrapper #works .container ul li:nth-child(1),
+body .wrapper #works .container ul li:nth-child(2) {
+  margin-bottom: 222px;
+}
+body .wrapper #works .container ul li:nth-child(5),
+body .wrapper #works .container ul li:nth-child(6) {
+  margin-bottom: 100px;
 }
 @media screen and (max-width: 1200px) {
   body .wrapper #works {
@@ -898,12 +913,21 @@ body .wrapper #works .container ul li:last-child {
   }
   body .wrapper #works .container ul li {
     width: 47%;
+    margin-bottom: 140px;
   }
   body .wrapper #works .container ul li > div div {
     height: 118px;
   }
   body .wrapper #works .container ul li > div div img {
     width: 332px;
+  }
+  body .wrapper #works .container ul li:nth-child(1),
+  body .wrapper #works .container ul li:nth-child(2) {
+    margin-bottom: 140px;
+  }
+  body .wrapper #works .container ul li:nth-child(5),
+  body .wrapper #works .container ul li:nth-child(6) {
+    margin-bottom: 100px;
   }
 }
 @media screen and (max-width: 883px) {
@@ -923,6 +947,9 @@ body .wrapper #works .container ul li:last-child {
   }
 }
 @media screen and (max-width: 718px) {
+  body .wrapper #works .container ul li {
+    margin-bottom: 120px !important;
+  }
   body .wrapper #works .container ul li > div div {
     height: 95px;
   }
@@ -956,6 +983,9 @@ body .wrapper #works .container ul li:last-child {
   }
 }
 @media screen and (max-width: 499px) {
+  body .wrapper #works .container ul li {
+    margin-bottom: 100px !important;
+  }
   body .wrapper #works .container ul li > div div {
     height: 68px;
   }
@@ -985,15 +1015,16 @@ body .wrapper #works .container ul li:last-child {
   body .wrapper #works .container ul li {
     display: block;
     width: 100%;
-  }
-  body .wrapper #works .container ul li:first-child {
-    margin-bottom: 102px;
+    margin-bottom: 100px !important;
   }
   body .wrapper #works .container ul li > div div {
     height: 92px;
   }
   body .wrapper #works .container ul li > div div img {
     width: 260px;
+  }
+  body .wrapper #works .container ul li:last-child {
+    margin-bottom: 50px !important;
   }
 }
 body .wrapper #news {
@@ -1189,6 +1220,15 @@ body .wrapper #creatives .container #creatives_carousel .carousel-inner .carouse
 }
 body .wrapper #creatives .container #creatives_carousel .carousel-inner .carousel-item.mellowrainy li:first-child::before {
   background-image: url("../images/mellowrainy_profile.png");
+}
+body .wrapper #creatives .container #creatives_carousel .carousel-inner .carousel-item.sc li:first-child::before {
+  background-image: url("../images/sc_profile.png");
+}
+body .wrapper #creatives .container #creatives_carousel .carousel-inner .carousel-item.fino li:first-child::before {
+  background-image: url("../images/fino_profile.png");
+}
+body .wrapper #creatives .container #creatives_carousel .carousel-inner .carousel-item.zyphy li:first-child::before {
+  background-image: url("../images/zyphy_profile.png");
 }
 body .wrapper #creatives .container #creatives_carousel .carousel-control-next,
 body .wrapper #creatives .container #creatives_carousel .carousel-control-prev {
@@ -2026,6 +2066,66 @@ body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .ca
 }
 body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item.mellowrainy_porfolio .artist_info .portfolio_image_list li:nth-child(12) button {
   background-image: url("../images/mellowrainy_p_012.png");
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item.sc_porfolio .artist_info .portfolio_image_list li:nth-child(1) button {
+  background-image: url("../images/sc_p_001.png");
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item.sc_porfolio .artist_info .portfolio_image_list li:nth-child(2) button {
+  background-image: url("../images/sc_p_002.png");
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item.sc_porfolio .artist_info .portfolio_image_list li:nth-child(3) button {
+  background-image: url("../images/sc_p_003.png");
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item.sc_porfolio .artist_info .portfolio_image_list li:nth-child(4) button {
+  background-image: url("../images/sc_p_005.png");
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item.sc_porfolio .artist_info .portfolio_image_list li:nth-child(5) button {
+  background-image: url("../images/sc_p_006.png");
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item.fino_porfolio .artist_info .portfolio_image_list li:nth-child(1) button {
+  background-image: url("../images/fino_p_001.png");
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item.fino_porfolio .artist_info .portfolio_image_list li:nth-child(2) button {
+  background-image: url("../images/fino_p_002.png");
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item.fino_porfolio .artist_info .portfolio_image_list li:nth-child(3) button {
+  background-image: url("../images/fino_p_003.png");
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item.fino_porfolio .artist_info .portfolio_image_list li:nth-child(4) button {
+  background-image: url("../images/fino_p_004.png");
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item.fino_porfolio .artist_info .portfolio_image_list li:nth-child(5) button {
+  background-image: url("../images/fino_p_005.png");
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item.fino_porfolio .artist_info .portfolio_image_list li:nth-child(6) button {
+  background-image: url("../images/fino_p_006.png");
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item.zyphy_porfolio .artist_info .portfolio_image_list li:nth-child(1) button {
+  background-image: url("../images/zyphy_p_001.png");
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item.zyphy_porfolio .artist_info .portfolio_image_list li:nth-child(2) button {
+  background-image: url("../images/zyphy_p_002.png");
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item.zyphy_porfolio .artist_info .portfolio_image_list li:nth-child(3) button {
+  background-image: url("../images/zyphy_p_003.png");
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item.zyphy_porfolio .artist_info .portfolio_image_list li:nth-child(4) button {
+  background-image: url("../images/zyphy_p_004.png");
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item.zyphy_porfolio .artist_info .portfolio_image_list li:nth-child(5) button {
+  background-image: url("../images/zyphy_p_005.png");
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item.zyphy_porfolio .artist_info .portfolio_image_list li:nth-child(6) button {
+  background-image: url("../images/zyphy_p_006.png");
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item.zyphy_porfolio .artist_info .portfolio_image_list li:nth-child(7) button {
+  background-image: url("../images/zyphy_p_007.png");
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item.zyphy_porfolio .artist_info .portfolio_image_list li:nth-child(8) button {
+  background-image: url("../images/zyphy_p_008.png");
+}
+body #portfolio_modal .modal-dialog .modal-content #creatives_carousel_modal .carousel-inner .carousel-item.zyphy_porfolio .artist_info .portfolio_image_list li:nth-child(9) button {
+  background-image: url("../images/zyphy_p_009.png");
 }
 body #portfolio_modal .modal-dialog .modal-content .portfolio_image_content {
   width: 506px;

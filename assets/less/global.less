@@ -943,6 +943,7 @@ body {
                     li {
                         display: inline-block;
                         margin-right: 40px;
+                        margin-bottom: 220px;
                         vertical-align: top;
                         width: 546px;
                         > div {
@@ -993,6 +994,12 @@ body {
                                         color: #C470FB;
                                     }
                                 }
+                                &.coming_soon {
+                                    pointer-events: none;
+                                    span {
+                                        color: #E0B344;
+                                    }
+                                }
                             }
                             &:hover {
                                 div {
@@ -1000,8 +1007,14 @@ body {
                                 }
                             }
                         }
-                        &:last-child {
-                            margin: 0px;
+                        &:nth-child(2n+2){
+                            margin-right: 0px;
+                        }
+                        &:nth-child(1), &:nth-child(2) {
+                            margin-bottom: 222px;
+                        }
+                        &:nth-child(5), &:nth-child(6) {
+                            margin-bottom: 100px;
                         }
                     }
                 }
@@ -1012,6 +1025,7 @@ body {
                     ul {
                         li {
                             width: 47%;
+                            margin-bottom: 140px;
                             >div {
                                 div {
                                     height: 118px;
@@ -1020,6 +1034,13 @@ body {
                                     }
                                 }
                             }
+                            &:nth-child(1), &:nth-child(2) {
+                                margin-bottom: 140px;
+                            }
+                            &:nth-child(5), &:nth-child(6) {
+                                margin-bottom: 100px;
+                            }
+
                         }
                     }
                 }
@@ -1046,6 +1067,7 @@ body {
                 .container {
                     ul {
                         li {
+                            margin-bottom: 120px !important;
                             >div {
                                 div {
                                     height: 95px;
@@ -1103,6 +1125,7 @@ body {
                 .container {
                     ul {
                         li {
+                            margin-bottom: 100px !important;
                             >div {
                                 div {
                                     height: 68px;
@@ -1147,9 +1170,7 @@ body {
                         li {
                             display: block;
                             width: 100%;
-                            &:first-child {
-                                margin-bottom: 102px;
-                            }
+                            margin-bottom: 100px !important;
                             >div {
                                 div {
                                     height: 92px;
@@ -1157,6 +1178,9 @@ body {
                                         width: 260px;
                                     }
                                 }
+                            }
+                            &:last-child {
+                                margin-bottom: 50px !important;
                             }
                         }
                     }
@@ -1437,6 +1461,33 @@ body {
                                     &:first-child {
                                         &::before {
                                             background-image: url("../images/mellowrainy_profile.png");
+                                        }
+                                    }
+                                }
+                            }
+                            &.sc {
+                                li {
+                                    &:first-child {
+                                        &::before {
+                                            background-image: url("../images/sc_profile.png");
+                                        }
+                                    }
+                                }
+                            }
+                            &.fino {
+                                li {
+                                    &:first-child {
+                                        &::before {
+                                            background-image: url("../images/fino_profile.png");
+                                        }
+                                    }
+                                }
+                            }
+                            &.zyphy {
+                                li {
+                                    &:first-child {
+                                        &::before {
+                                            background-image: url("../images/zyphy_profile.png");
                                         }
                                     }
                                 }
@@ -2618,6 +2669,118 @@ body {
                                     &:nth-child(12) {
                                         button {
                                             background-image: url("../images/mellowrainy_p_012.png");
+                                        }
+                                    }
+                                }
+                            }
+                            &.sc_porfolio .artist_info .portfolio_image_list {
+                                li {
+                                    &:nth-child(1) {
+                                        button {
+                                            background-image: url("../images/sc_p_001.png");
+                                        }
+                                    }
+                                    &:nth-child(2) {
+                                        button {
+                                            background-image: url("../images/sc_p_002.png");
+                                        }
+                                    }
+                                    &:nth-child(3) {
+                                        button {
+                                            background-image: url("../images/sc_p_003.png");
+                                        }
+                                    }
+                                    &:nth-child(4) {
+                                        button {
+                                            background-image: url("../images/sc_p_005.png");
+                                        }
+                                    }
+                                    &:nth-child(5) {
+                                        button {
+                                            background-image: url("../images/sc_p_006.png");
+                                        }
+                                    }
+                                }
+                            }
+                            &.fino_porfolio .artist_info .portfolio_image_list {
+                                li {
+                                    &:nth-child(1) {
+                                        button {
+                                            background-image: url("../images/fino_p_001.png");
+                                        }
+                                    }
+                                    &:nth-child(2) {
+                                        button {
+                                            background-image: url("../images/fino_p_002.png");
+                                        }
+                                    }
+                                    &:nth-child(3) {
+                                        button {
+                                            background-image: url("../images/fino_p_003.png");
+                                        }
+                                    }
+                                    &:nth-child(4) {
+                                        button {
+                                            background-image: url("../images/fino_p_004.png");
+                                        }
+                                    }
+                                    &:nth-child(5) {
+                                        button {
+                                            background-image: url("../images/fino_p_005.png");
+                                        }
+                                    }
+                                    &:nth-child(6) {
+                                        button {
+                                            background-image: url("../images/fino_p_006.png");
+                                        }
+                                    }
+                                }
+                            }
+                            &.zyphy_porfolio .artist_info .portfolio_image_list {
+                                li {
+                                    &:nth-child(1) {
+                                        button {
+                                            background-image: url("../images/zyphy_p_001.png");
+                                        }
+                                    }
+                                    &:nth-child(2) {
+                                        button {
+                                            background-image: url("../images/zyphy_p_002.png");
+                                        }
+                                    }
+                                    &:nth-child(3) {
+                                        button {
+                                            background-image: url("../images/zyphy_p_003.png");
+                                        }
+                                    }
+                                    &:nth-child(4) {
+                                        button {
+                                            background-image: url("../images/zyphy_p_004.png");
+                                        }
+                                    }
+                                    &:nth-child(5) {
+                                        button {
+                                            background-image: url("../images/zyphy_p_005.png");
+                                        }
+                                    }
+                                    &:nth-child(6) {
+                                        button {
+                                            background-image: url("../images/zyphy_p_006.png");
+                                        }
+                                    }
+                                    &:nth-child(7) {
+                                        button {
+                                            background-image: url("../images/zyphy_p_007.png");
+                                        }
+                                    }
+                                    &:nth-child(8) {
+                                        button {
+                                            background-image: url("../images/zyphy_p_008.png");
+                                        }
+                                    }
+                                    &:nth-child(9) {
+                                        button {
+                                            background-image: url("../images/zyphy_p_009.png");
                                         }
                                     }
                                 }
